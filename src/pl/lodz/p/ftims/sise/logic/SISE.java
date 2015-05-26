@@ -1,15 +1,11 @@
-package logic;
+package pl.lodz.p.ftims.sise.logic;
 
 import java.util.ArrayList;
 import java.util.Collections;
 
-import perceptronModel.Perceptron;
-import perceptronModel.PerceptronElementData;
+import pl.lodz.p.ftims.sise.perceptronModel.Perceptron;
+import pl.lodz.p.ftims.sise.perceptronModel.PerceptronElementData;
 
-/**
- * @author Sebastian Graf
- *
- */
 public class SISE {
 	
 	public static void runSISE() {

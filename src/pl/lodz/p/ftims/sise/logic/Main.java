@@ -1,16 +1,10 @@
-package logic;
+package pl.lodz.p.ftims.sise.logic;
 
-/**
- * @author Sebastian Graf
- *
- */
 public class Main {
 
 	public static void main(String[] args) {
 		SISE.runSISE();
-
 	}
-
 }
 
 // TODO: Wagi losowane przy tworzeniu neuronu.

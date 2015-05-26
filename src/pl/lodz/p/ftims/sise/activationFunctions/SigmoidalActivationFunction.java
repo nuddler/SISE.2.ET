@@ -1,4 +1,4 @@
-package activationFunctions;
+package pl.lodz.p.ftims.sise.activationFunctions;
 
 public class SigmoidalActivationFunction extends ActivationFunction {
 

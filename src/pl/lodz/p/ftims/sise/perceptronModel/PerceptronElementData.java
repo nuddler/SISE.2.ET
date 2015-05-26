@@ -1,4 +1,4 @@
-package perceptronModel;
+package pl.lodz.p.ftims.sise.perceptronModel;
 
 /**
  * @author Sebastian Graf

@@ -1,4 +1,4 @@
-package activationFunctions;
+package pl.lodz.p.ftims.sise.activationFunctions;
 
 public class LinearActivationFunction extends ActivationFunction {
 
@@ -6,5 +6,4 @@ public class LinearActivationFunction extends ActivationFunction {
     public double calculate(double formula, double beta) {
         return formula;
     }
-
 }

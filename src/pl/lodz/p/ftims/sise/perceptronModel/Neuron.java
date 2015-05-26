@@ -1,11 +1,7 @@
-package perceptronModel;
+package pl.lodz.p.ftims.sise.perceptronModel;
 
-import activationFunctions.ActivationFunction;
+import pl.lodz.p.ftims.sise.activationFunctions.ActivationFunction;
 
-/**
- * @author Sebastian Graf
- * 
- */
 public class Neuron implements PerceptronElement {
     private double[] weights;
     public double[] getWeights() {

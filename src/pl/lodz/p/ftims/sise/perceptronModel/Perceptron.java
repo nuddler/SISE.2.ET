@@ -1,6 +1,7 @@
-package perceptronModel;
+package pl.lodz.p.ftims.sise.perceptronModel;
 
-import activationFunctions.*;
+import pl.lodz.p.ftims.sise.activationFunctions.LinearActivationFunction;
+import pl.lodz.p.ftims.sise.activationFunctions.SigmoidalActivationFunction;
 
 /**
  * @author Sebastian Graf
