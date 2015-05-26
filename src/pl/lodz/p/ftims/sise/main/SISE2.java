@@ -1,4 +1,4 @@
-package pl.lodz.p.ftims.sise.logic;
+package pl.lodz.p.ftims.sise.main;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -36,8 +36,8 @@ public class SISE2 {
         dataInit[1] = new PerceptronElementData[10];
         dataInit[1][0] = new PerceptronElementData(w10, alpha, beta);
         dataInit[1][1] = new PerceptronElementData(w11, alpha, beta);
-        dataInit[1][2] = new PerceptronElementData(w12, alpha, beta);
         dataInit[1][3] = new PerceptronElementData(w13, alpha, beta);
+        dataInit[1][2] = new PerceptronElementData(w12, alpha, beta);
         dataInit[1][4] = new PerceptronElementData(w14, alpha, beta);
         dataInit[1][5] = new PerceptronElementData(w15, alpha, beta);
         dataInit[1][6] = new PerceptronElementData(w16, alpha, beta);

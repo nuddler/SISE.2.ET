@@ -59,12 +59,10 @@ public class Perceptron {
 	    	System.out.println("Expeted :"+ expectedResult[0] + " Result: " + lastLayerOutput[0]);
 	    }
 	    
-	    // Back Propagation
 	    backPropagationAlgorithm(lastLayerOutput, expectedResult);
-	    
 	}
 	
-	public double[] launchAndReturnResult(double[] input) {
+/*	public double[] launchAndReturnResult(double[] input) {
 		double[] lastLayerOutput = 
 	            new double[ neuralNetwork[0].length ];
 	       
@@ -86,7 +84,7 @@ public class Perceptron {
 		    }
 		
 		return lastLayerOutput;
-	}
+	}*/
 	
 	private void backPropagationAlgorithm(double[] output, double[] expectedResult) {
 	    double[][] delta;
@@ -102,7 +100,7 @@ public class Perceptron {
 	                * lNeuron.calculateDerivativeOfTheSigmoid();
 	    }
 	    
-	    // next layer. XXX
+	    // next layer
 	    for(int i = 0; i < delta[delta.length-2].length; i++) {
 	        Neuron lNeuron = (Neuron)neuralNetwork[neuralNetwork.length-2][i];
 	        double lDelta = 0;
