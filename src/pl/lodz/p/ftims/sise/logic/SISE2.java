@@ -6,9 +6,10 @@ import java.util.Collections;
 import pl.lodz.p.ftims.sise.perceptronModel.Perceptron;
 import pl.lodz.p.ftims.sise.perceptronModel.PerceptronElementData;
 
-public class SISE {
+public class SISE2 {
+	static int epochAmount = 30000;
 	
-	public static void runSISE() {
+	public static void run() {
 		// Inicjalizacja perceptronu 1-10-1.
         double[] w00 = {1};
         
@@ -47,23 +48,22 @@ public class SISE {
         dataInit[2] = new PerceptronElementData[1];
         dataInit[2][0] = new PerceptronElementData(w20, alpha, beta);
 	    
-	    Perceptron perc1 = new Perceptron(dataInit);
+	    Perceptron perceptron = new Perceptron(dataInit);
 	    
-	    // Epokowe nauczanie.
-	    ArrayList<Double> epok = new ArrayList<Double>();
-	    for(int i = 1; i <= 100; i++)
-	    	epok.add((double)i);
+	    ArrayList<Double> epoch = new ArrayList<Double>();
+	    for(int i = 1; i <= 100; i++){
+	    	epoch.add((double)i);
+	    }
 	    
-	    for(int i = 0; i < 30000; i++) {
-	    	Collections.shuffle(epok);
-	    	for(Double j : epok) {
-	    		double[] var = { j.doubleValue() };
-	    		double[] res = { Math.sqrt(j.doubleValue()) };
-	    		
-	    		perc1.launchWithLearning(var, res);
+		for(int i = 0; i < epochAmount; i++) {
+	    	Collections.shuffle(epoch);
+	    	for(Double e : epoch) {
+	    		double[] input = { e.doubleValue() };
+	    		double[] expected = { Math.sqrt(e.doubleValue()) };
+	    		perceptron.launchWithLearning(input, expected);
 	    	}
 	    }
-	    System.out.println("end");
+	    System.out.println("Koniec");
 	}
 }
 

@@ -3,19 +3,10 @@ package pl.lodz.p.ftims.sise.perceptronModel;
 import pl.lodz.p.ftims.sise.activationFunctions.LinearActivationFunction;
 import pl.lodz.p.ftims.sise.activationFunctions.SigmoidalActivationFunction;
 
-/**
- * @author Sebastian Graf
- *
- */
 public class Perceptron {
 	
 	private PerceptronElement[][] neuralNetwork;
 
-	/**
-	 * Generate neural network.
-	 * @param dataInit - parameters needed for neurons. 
-	 *     Also used as the size of the network. 
-	 */
 	public Perceptron(PerceptronElementData[][] dataInit) {
 	    // 1st dimension.
         PerceptronElement[][] neuralNetwork = 
@@ -44,10 +35,6 @@ public class Perceptron {
         this.neuralNetwork = neuralNetwork;
 	}	
 	
-	/** Launch perceptron and teach it.
-	 * @param input - list of input.
-	 * @param expectedResult - list of expected results.
-	 */
 	public void launchWithLearning(double[] input, double[] expectedResult) {
        double[] lastLayerOutput = new double[ neuralNetwork[0].length ];
        
@@ -101,11 +88,6 @@ public class Perceptron {
 		return lastLayerOutput;
 	}
 	
-	/**
-	 * BP for square root.
-	 * XXX: dziala tylko dla 2ch warstw.
-	 * @param output - perceptron output (last layer output).
-	 */
 	private void backPropagationAlgorithm(double[] output, double[] expectedResult) {
 	    double[][] delta;
 	    delta = new double[neuralNetwork.length-1][];
@@ -142,9 +124,6 @@ public class Perceptron {
 	            lNeuron.modyfyWeights(lDelta);
 	        }
 	    }
-	    
-	    
-	    //TODO: jakos to polaczyc nad zeby dzialalo dla wszystkiego
 	}
 	
 }
