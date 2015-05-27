@@ -7,7 +7,7 @@ import pl.lodz.p.ftims.sise.perceptronModel.Perceptron;
 import pl.lodz.p.ftims.sise.perceptronModel.PerceptronElementData;
 
 public class SISE2 {
-	static int epochAmount = 30000;
+	static int epochAmount = 20000;
 	
 	public static void run() {
 		// Inicjalizacja perceptronu 1-10-1.
@@ -50,16 +50,16 @@ public class SISE2 {
 	    
 	    Perceptron perceptron = new Perceptron(dataInit);
 	    
-	    ArrayList<Double> epoch = new ArrayList<Double>();
+	    ArrayList<Double> numbers = new ArrayList<Double>();
 	    for(int i = 1; i <= 100; i++){
-	    	epoch.add((double)i);
+	    	numbers.add((double)i);
 	    }
 	    
 		for(int i = 0; i < epochAmount; i++) {
-	    	Collections.shuffle(epoch);
-	    	for(Double e : epoch) {
-	    		double[] input = { e.doubleValue() };
-	    		double[] expected = { Math.sqrt(e.doubleValue()) };
+	    	Collections.shuffle(numbers);
+	    	for(Double n : numbers) {
+	    		double[] input = { n.doubleValue() };
+	    		double[] expected = { Math.sqrt(n.doubleValue()) };
 	    		perceptron.launchWithLearning(input, expected);
 	    	}
 	    }

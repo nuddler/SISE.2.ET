@@ -29,7 +29,7 @@ public class Perceptron {
         int lastLayerIndex = dataInit.length-1;
         for(int j = 0; j < neuralNetwork[ lastLayerIndex ].length; j++)
             neuralNetwork[ lastLayerIndex ][j] 
-                    = new Neuron(dataInit[ lastLayerIndex ][j], new LinearActivationFunction());	// XXX: edit.
+                    = new Neuron(dataInit[ lastLayerIndex ][j], new LinearActivationFunction());
 
         // Assign neural network.
         this.neuralNetwork = neuralNetwork;
